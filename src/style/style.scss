@@ -10,13 +10,15 @@ body {
 header {
   display: flex;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+  margin-left: 5px;
 
   .logo {
     width: 40px;
     height: 40px;
     background-image: url(img/logo.png);
     margin-right: 12px;
+    border-radius: 3px;
   }
 }
 
@@ -26,11 +28,13 @@ header {
   padding: 18px;
 }
 
-@for $i from 1 through 24 {
+@for $i from 1 through 32 {
   .mt-#{$i} {
     margin-top: ($i) + px;
   }
+}
 
+@for $i from 1 through 32 {
   .mb-#{$i} {
     margin-bottom: ($i) + px;
   }

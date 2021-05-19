@@ -3,11 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCss = require('mini-css-extract-plugin');
 const cssFile = 'style.css';
 const wwwFolder = path.join(__dirname, 'www');
-const imgNames = 'img/[name].[ext]';
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src/script', 'index.ts')
+    main: path.join(__dirname, 'src', 'index.ts')
   },
   output: {
     filename: '[name].js',
@@ -29,7 +28,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.htm|html$/,
+        test: /\.html$/,
         use: ['html-loader'],
         include: [path.join(__dirname, 'src')],
         exclude: /node_modules/
@@ -60,7 +59,7 @@ module.exports = {
         },
         parser: {
           dataUrlCondition: {
-            maxSize: 16 * 1024
+            maxSize: 4 * 1024
           }
         }
       }
@@ -71,9 +70,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.htm'),
+      template: path.join(__dirname, 'src', 'index.html'),
       inject: true,
-      filename: 'index.htm'
+      filename: 'index.html'
     }),
     new MiniCss({
       filename: cssFile
