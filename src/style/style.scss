@@ -1,0 +1,37 @@
+@import 'variables.scss';
+@import 'layout.scss';
+@import 'typography.scss';
+
+body {
+  padding-top: 48px;
+  background-image: url(img/background.jpg);
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-image: url(img/logo.png);
+    margin-right: 12px;
+  }
+}
+
+.main-contents {
+  background: #fff;
+  border-radius: 5px;
+  padding: 18px;
+}
+
+@for $i from 1 through 24 {
+  .mt-#{$i} {
+    margin-top: ($i) + px;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: ($i) + px;
+  }
+}

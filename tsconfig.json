@@ -1,0 +1,21 @@
+{
+    "compileOnSave": false, 
+    "compilerOptions": {
+      "baseUrl": "./",
+      "target": "esnext",
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "module": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      
+      "moduleResolution": "node",
+      "strictPropertyInitialization": false,
+      "noImplicitAny": true,
+      "allowUnreachableCode": false,
+      "types": ["node"],
+      "paths": {
+      }
+    }
+    
+  }
